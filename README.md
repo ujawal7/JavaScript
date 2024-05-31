@@ -60,7 +60,7 @@ console.log(x); // Output: undefined
 var x = 5;
 console.log(x); // Output: 5
 ```
-In the above code, even though console.log(x) appears before the declaration of var x, it doesn't throw an error. Instead, it prints undefined, because during the compilation phase, var x is hoisted to the top of its containing scope, making it available throughout the function (or global scope, if it's not in a function). However, its initialization (x = 5) is not hoisted, so x is undefined until it's assigned a value.<br>
+In the above code, even though console.log(x) appears before the declaration of var x, it doesn't throw an error. Instead, it prints undefined, because var x is hoisted to the top of its containing scope during the compilation phase, making it available throughout the function (or global scope, if it's not in a function). However, its initialization (x = 5) is not hoisted, so x is undefined until it's assigned a value.<br>
 
 **5. Difference between let and var**<br>
 ```javascript
@@ -80,7 +80,7 @@ var g = 9;
 }
 console.log(g) // 7
 ```
-The main difference between var and let is if we declare a variable with var and use it before declaring it will do hoisting and give output as undefined whereas if we use let than will give direct error.
+The main difference between var and let is if we declare a variable with var and use it before declaring it will do hoisting and give output as undefined whereas if we use let, it will give a direct error.
 ```javascript
 console.log(x); // Output: undefined
 var x = 5;
